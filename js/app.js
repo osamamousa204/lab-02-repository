@@ -40,11 +40,14 @@ GalleryOfHornes.prototype.runderAllHornes = function () {
 }
 
 ////////////////function runders the select options \\\\\\\\\\\\\\\\
+var arrKey =[];
 GalleryOfHornes.prototype.runderOptions = function () {
-
-    let optionlHorne = $('<option></option>').text(this.title);
-    optionlHorne.attr('value',this.keyword)
-    $('select').append(optionlHorne);    
+    if (!arrKey.includes(this.keyword)){
+        arrKey.push(this.keyword)
+        let optionlHorne = $('<option></option>').text(this.keyword);
+        optionlHorne.attr('value',this.keyword)
+        $('select').append(optionlHorne);    
+    }
 }
 
 //////////////////////event lestiner for select options\\\\\\\\\\\\\\\\\\\\\
@@ -58,6 +61,7 @@ $('select').on('change', function()  {
             allcjosen.push(GalleryOfHornes.all[i]);
         }
     }
+    
     runderFilteredOptions();
  }
  )       
@@ -65,7 +69,6 @@ $('select').on('change', function()  {
  //////////////////////function runders filtered options\\\\\\\\\\\\\\\\\\\\\
 
 function runderFilteredOptions (){
-    console.log('ggggg');
     
     $('.photo-template').empty();
     allcjosen.forEach((value)=>{
