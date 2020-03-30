@@ -11,7 +11,8 @@ function GalleryOfHornes(image_url, title, description, keyword, horns) {
 }
 GalleryOfHornes.all=[]
 /////////////get the data from json\\\\\\\\\\\\
-$.get('data/page-1.json')
+
+$.get('/data/page-1.json')
     .then(data => {
         data.forEach((value) => {
             let horn = new GalleryOfHornes(value.image_url, value.title, value.description, value.keyword, value.horns)
