@@ -1,0 +1,12 @@
+/* font-family: 'Spicy Rice', cursive; */
+body{
+    background-color: rgb(155, 123, 241);
+}
+h2,p,footer{
+    font-family: 'Spicy Rice', cursive;
+}
+
+div{
+    background-color: rgb(55, 21, 180);
+}
+
