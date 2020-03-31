@@ -9,4 +9,7 @@ h2,p,footer{
 div{
     background-color: rgb(55, 21, 180);
 }
-
+button{
+    width: 200px;
+    height: 100px;
+}
