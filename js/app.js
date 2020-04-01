@@ -115,7 +115,7 @@ $('#filter').on('change', function () {
 )
 
 //////////////////////event lestiner for button 1 options\\\\\\\\\\\\\\\\\\\\\
-var testButton =[];
+var testButton ='clicked-1';
 
 $('#page1').on('click', function (event) {
     event.preventDefault();
