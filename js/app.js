@@ -33,12 +33,12 @@ GalleryOfHornes.prototype.toHtml = function () {
 $.get('data/page-1.json')
     .then(data => {
 
-        function SortByName(a, b) {
-            var aName = a.title;
-            var bName = b.title;
-            return ((aName < bName) ? 1 : ((aName > bName) ? -1 : 0));
-        }
-        data.sort(SortByName);
+        // function SortByName(a, b) {
+        //     var aName = a.title;
+        //     var bName = b.title;
+        //     return ((aName < bName) ? 1 : ((aName > bName) ? -1 : 0));
+        // }
+        // data.sort(SortByName);
 
         data.forEach((value) => {
             let horn = new GalleryOfHornes(value.image_url, value.title, value.description, value.keyword, value.horns)
